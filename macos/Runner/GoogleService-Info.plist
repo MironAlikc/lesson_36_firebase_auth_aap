@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAap9A8CEqEd8rMqITWw6mmIdwN1pBQWHI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>709161327858</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.lesson36FirebaseAuth.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>auth-firebase-lesson-53bd0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>auth-firebase-lesson-53bd0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:709161327858:ios:e35c6fb2d9d115d7d5446b</string>
+</dict>
+</plist>

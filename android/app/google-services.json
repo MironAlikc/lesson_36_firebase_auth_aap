@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "709161327858",
+    "project_id": "auth-firebase-lesson-53bd0",
+    "storage_bucket": "auth-firebase-lesson-53bd0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709161327858:android:95c9b0cef3fe4f9ed5446b",
+        "android_client_info": {
+          "package_name": "com.example.lesson_36_firebase_auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDawDHbm5jnpmTx3KETro_D-JhbWzwi2D0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
