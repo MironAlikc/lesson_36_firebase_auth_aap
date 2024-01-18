@@ -31,4 +31,23 @@ class FirebaseServices {
     }
     return isAuth;
   }
+
+  Future<bool> registartion({
+    required String email,
+    required String password,
+  }) async {
+    bool isAuth = false;
+    try {
+      await auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      isAuth = true;
+    } catch (e) {
+      print(
+        e.toString(),
+      );
+    }
+    return isAuth;
+  }
 }
