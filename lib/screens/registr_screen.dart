@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:lesson_36_firebase_auth/firebase_services.dart';
 import 'package:lesson_36_firebase_auth/screens/home_screen.dart';
-import 'package:lesson_36_firebase_auth/screens/reset_password_page.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class RegistrScreen extends StatelessWidget {
+  const RegistrScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final controllerEmail = TextEditingController();
     final controllerPassword = TextEditingController();
-    //final auth = FirebaseServices(); // экземпляр класса
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green,
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -44,10 +42,10 @@ class HomePage extends StatelessWidget {
               height: 50,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Colors.green,
                 ),
                 onPressed: () async {
-                  bool isAuthorized = await FirebaseServices().authByEmail(
+                  bool isAuthorized = await FirebaseServices().registartion(
                     email: controllerEmail.text,
                     password: controllerPassword.text,
                   );
@@ -69,7 +67,7 @@ class HomePage extends StatelessWidget {
                   }
                 },
                 child: const Text(
-                  'Auth',
+                  'Registr',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -77,17 +75,6 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ResetPasswordPage(),
-                  ),
-                );
-              },
-              child: const Text('Forgot password'),
             ),
           ],
         ),

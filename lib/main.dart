@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:lesson_36_firebase_auth/firebase_options.dart';
-import 'package:lesson_36_firebase_auth/screens/home_page.dart';
+import 'package:lesson_36_firebase_auth/screens/auth_screen.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const AuthScreen(),
     );
   }
 }
