@@ -1,15 +1,19 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lesson_36_firebase_auth/firebase_services.dart';
-import 'package:lesson_36_firebase_auth/screens/home_screen.dart';
-import 'package:lesson_36_firebase_auth/screens/user_data_screen.dart';
 
-class RegistrScreen extends StatelessWidget {
-  const RegistrScreen({super.key});
+class UserDataScreen extends StatelessWidget {
+  const UserDataScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final controllerEmail = TextEditingController();
-    final controllerPassword = TextEditingController();
+    final controllerName = TextEditingController();
+    final controllerSureName = TextEditingController();
+    final controllerGender = TextEditingController();
+    final controllerAge = TextEditingController();
+    final auth = FirebaseAuth.instance;
+    final service = FirebaseServices();
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
@@ -19,9 +23,9 @@ class RegistrScreen extends StatelessWidget {
         child: Column(
           children: [
             TextField(
-              controller: controllerEmail,
+              controller: controllerName,
               decoration: InputDecoration(
-                hintText: 'Email',
+                hintText: 'Name',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25),
                 ),
@@ -29,9 +33,29 @@ class RegistrScreen extends StatelessWidget {
             ),
             const SizedBox(height: 25),
             TextField(
-              controller: controllerPassword,
+              controller: controllerSureName,
               decoration: InputDecoration(
-                hintText: 'Passowrd',
+                hintText: 'SureName',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                ),
+              ),
+            ),
+            const SizedBox(height: 25),
+            TextField(
+              controller: controllerGender,
+              decoration: InputDecoration(
+                hintText: 'SureName',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                ),
+              ),
+            ),
+            const SizedBox(height: 25),
+            TextField(
+              controller: controllerAge,
+              decoration: InputDecoration(
+                hintText: 'age',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25),
                 ),
@@ -45,30 +69,9 @@ class RegistrScreen extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
                 ),
-                onPressed: () async {
-                  bool isAuthorized = await FirebaseServices().registartion(
-                    email: controllerEmail.text,
-                    password: controllerPassword.text,
-                  );
-                  if (isAuthorized) {
-                    // ignore: use_build_context_synchronously
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const UserDataScreen(),
-                      ),
-                    );
-                  } else {
-                    // ignore: use_build_context_synchronously
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Error'),
-                      ),
-                    );
-                  }
-                },
+                onPressed: () async {},
                 child: const Text(
-                  'Next',
+                  'Registr',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,

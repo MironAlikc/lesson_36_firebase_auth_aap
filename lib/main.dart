@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:lesson_36_firebase_auth/firebase_options.dart';
 import 'package:lesson_36_firebase_auth/screens/auth_screen.dart';
+import 'package:lesson_36_firebase_auth/screens/user_data_screen.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -16,14 +17,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.deepPurple,
+          ),
+          useMaterial3: true,
         ),
-        useMaterial3: true,
-      ),
-      home: const AuthScreen(),
-    );
+        home: AuthScreen());
   }
 }
